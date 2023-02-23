@@ -22,6 +22,7 @@ func main() {
 		Addr:    ":10085",
 		Handler: router,
 	}
+
 	// 4. run http server
 	if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 		log.Fatalf("http server startup err: %s", err.Error())

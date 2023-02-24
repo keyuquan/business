@@ -1,7 +1,7 @@
 package http
 
 import (
-	"business/internal/models"
+	"business/internal/model"
 	"business/pkg/log"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -26,16 +26,16 @@ func (c Context) GetClientIP() string {
 	return c.ClientIP()
 }
 
-func (c *Context) SetAdminInfo(admin *models.TAdmin) {
+func (c *Context) SetAdminInfo(admin *model.TAdmin) {
 	c.Set("admin_info", admin)
 }
 
-func (c *Context) GetAdminInfo() (*models.TAdmin, bool) {
+func (c *Context) GetAdminInfo() (*model.TAdmin, bool) {
 	adminBytesInterface, ok := c.Get("admin_info")
 	if !ok {
 		return nil, false
 	}
-	res, ok := adminBytesInterface.(*models.TAdmin)
+	res, ok := adminBytesInterface.(*model.TAdmin)
 	if !ok {
 		return nil, false
 	}

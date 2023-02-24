@@ -1,4 +1,4 @@
-package models
+package model
 
 // TAdmin  商户后台会员记录
 type TAdmin struct {

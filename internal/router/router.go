@@ -1,6 +1,7 @@
 package router
 
 import (
+	"business/internal/handler"
 	"business/internal/ware"
 	"business/pkg/http"
 	"github.com/gin-gonic/gin"
@@ -22,6 +23,14 @@ func Cors() gin.HandlerFunc {
 func InitRouter() *gin.Engine {
 	router := gin.Default()
 	router.Use(Cors())
+	v1 := router.Group("business/v1")
+	{
+		// 图片上传
+		Post(v1, "/upload", handler.Upload)
+		// 图片下载
+		Get(v1, "/download", handler.Download)
+
+	}
 	return router
 }
 

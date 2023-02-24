@@ -16,7 +16,7 @@ type BaseSchema struct {
 
 func Response(ctx *Context, msg string, data ...interface{}) {
 	res := &BaseSchema{
-		Code:    0,
+		Code:    200,
 		Message: msg,
 	}
 	if len(data) > 0 {

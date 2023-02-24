@@ -8,7 +8,7 @@ import (
 )
 
 func Upload(c *http.Context) {
-	file, _ := c.FormFile("file")
+	file, _ := c.FormFile("filename")
 	req := model.UploadReq{}
 	err := c.ShouldBindJSON(&req)
 	if err != nil {

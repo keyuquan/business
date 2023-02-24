@@ -4,13 +4,13 @@
     "host": "13.212.254.93",
     "port": 3306,
     "username": "root",
-    "password": "1q2w3e4r..A",
+    "password": "6LxxpOg:ye*#wew",
     "db": "db_yy"
   },
   "redis": {
     "host": "13.212.254.93",
     "port": 6379,
-    "auth": "1q2w3e4r..A",
+    "auth": "2w3e4r&32*A",
     "db_index": 1,
     "timeout": 20,
     "pool_size": 100

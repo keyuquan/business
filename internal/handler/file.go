@@ -7,6 +7,9 @@ import (
 	"os"
 )
 
+func Test(c *http.Context) {
+	http.Response(c, "success", nil)
+}
 func Upload(c *http.Context) {
 	file, _ := c.FormFile("filename")
 	req := model.UploadReq{}

@@ -25,6 +25,7 @@ func InitRouter() *gin.Engine {
 	router.Use(Cors())
 	v1 := router.Group("business/v1")
 	{
+		Get(v1, "/test", handler.Test)
 		// 图片上传
 		Post(v1, "/upload", handler.Upload)
 		// 图片下载

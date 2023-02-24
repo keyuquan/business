@@ -1,14 +1,14 @@
 {
   "env": "debug",
   "mysql": {
-    "host": "13.212.254.93",
+    "host": "47.92.107.121",
     "port": 3306,
     "username": "root",
     "password": "6LxxpOg:ye*#wew",
-    "db": "db_yy"
+    "db": "business"
   },
   "redis": {
-    "host": "13.212.254.93",
+    "host": "47.92.107.121",
     "port": 6379,
     "auth": "2w3e4r&32*A",
     "db_index": 1,
